@@ -43,12 +43,12 @@
 
 ## Фаза 0. Каркас проекта
 
-- [ ] 0.1 Структура: `main.py`, `collectors/`, `db.py`, `scorer.py`, `notifier.py`, `config.py`, `sources.yaml`, `profile.md`, `.env.example`, `requirements.txt`, `.gitignore`
-- [ ] 0.2 `config.py`: чтение `.env` (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`, `SCORE_THRESHOLD`) и `sources.yaml`
-- [ ] 0.3 Логирование в файл с ротацией + в stdout
-- [ ] 0.4 Единый формат статьи: `Article(url, title, text, source, published_at)`
-- [ ] 0.5 Путь к конфигам и БД задаётся через `CONFIG_DIR` и `DB_PATH` (по умолчанию `./config`, `./data/digest.db`); `sources.yaml`, `profile.md`, `.env` читаются только из `CONFIG_DIR`, в коде нет упоминаний конкретных источников и проектов
-- [ ] **Готово, когда:** `python main.py --dry-run` стартует, читает конфиг, пишет лог, ничего не отправляет
+- [x] 0.1 Структура: `main.py`, `collectors/`, `db.py`, `scorer.py`, `notifier.py`, `config.py`, `sources.yaml`, `profile.md`, `.env.example`, `requirements.txt`, `.gitignore`
+- [x] 0.2 `config.py`: чтение `.env` (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`, `SCORE_THRESHOLD`) и `sources.yaml`
+- [x] 0.3 Логирование в файл с ротацией + в stdout
+- [x] 0.4 Единый формат статьи: `Article(url, title, text, source, published_at)`
+- [x] 0.5 Путь к конфигам и БД задаётся через `CONFIG_DIR` и `DB_PATH` (по умолчанию `./config`, `./data/digest.db`); `sources.yaml`, `profile.md`, `.env` читаются только из `CONFIG_DIR`, в коде нет упоминаний конкретных источников и проектов
+- [x] **Готово, когда:** `python main.py --dry-run` стартует, читает конфиг, пишет лог, ничего не отправляет
 
 ## Фаза 1. Один источник → SQLite → Telegram (без LLM)
 
