@@ -1,13 +1,16 @@
-# Шаблоны источников.
-# Каждая строка описывает один источник; конкретные URL и проекты
-# вписывает пользователь (в коде источников нет).
-# Схема будет расширяться в следующих фазах; базовые поля:
+# Источники статей (roadmap, фаза 1.3).
+# URL фидов Хабра проверены: каждый отдаёт валидный RSS (HTTP 200,
+# ~40 записей). Схема будет расширяться в следующих фазах; базовые поля:
 #   url    — адрес фида/источника
 #   name   — короткое имя источника
-#   score  — порог оценки для отправки (переопределяет глобальный)
-#   limit  — максимум статей за один запуск
-sources: []
-#  - name: example-feed
-#    url: https://example.com/feed.xml
-#    score: 7
-#    limit: 10
+#   score  — порог оценки для отправки (переопределяет глобальный; фаза 3)
+#   limit  — максимум статей за один запуск (фаза 2)
+sources:
+  - name: habr-articles
+    url: https://habr.com/ru/rss/articles/?fl=ru
+  - name: habr-python
+    url: https://habr.com/ru/rss/hubs/python/articles/?fl=ru
+  - name: habr-ai
+    url: https://habr.com/ru/rss/hubs/artificial_intelligence/articles/?fl=ru
+  - name: habr-programming
+    url: https://habr.com/ru/rss/hubs/programming/articles/?fl=ru
